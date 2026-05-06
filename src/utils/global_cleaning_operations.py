@@ -125,7 +125,7 @@ def _categorize_uma_role(cm: pl.DataFrame) -> pl.DataFrame:
         for c in role_cols
     ])
 
-
+#Fill columns with missing values in order for Hugging Face model to work properly
 def _fill_missing_values(cm: pl.DataFrame, col: str) -> pl.DataFrame:
     if col not in cm.columns:
         return cm

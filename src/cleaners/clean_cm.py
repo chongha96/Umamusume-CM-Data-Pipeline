@@ -1,5 +1,5 @@
 """
-----Cleaning CM7 Data----
+----Cleaning CM Data----
 
 Investigating the columns that are within each dataset, and what will be necessary for analysis.
 
