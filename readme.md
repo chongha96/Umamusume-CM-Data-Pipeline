@@ -99,11 +99,12 @@ This project loosely follows an ELT (Extract, Load, Transform). The data is loos
 ### 2. Configuration
 Create a `.env` file in the project root:
    ```env
-   GCP_PROJECT_ID "your_project_id_here"
-   GCP_DATASET_ID "your_dataset_id_here"
-   GOOGLE_APPLICATION_CREDENTIALS "your_token_here"
-   GOOGLE_APPLICATION_CREDENTIALS_PATH "your_json_path_here"
-   setx HUGGING_FACE_TOKEN "your_token_here"
+    GCP_PROJECT_ID = "your_project_id_here"
+    GCP_BRONZE_DATASET_ID= "your dataset_id here"
+    GCP_SILVER_DATASET_ID= "your dataset_id here"
+    GCP_GOLD_DATASET_ID= "your dataset_id here"
+    GOOGLE_APPLICATION_CREDENTIALS = "your_token_here"
+    GOOGLE_APPLICATION_CREDENTIALS_PATH = "your_json_path_here"
    ```
 
 Update Dockerfile with an appropriate Torch version for your GPU:
