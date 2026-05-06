@@ -61,7 +61,9 @@ This project loosely follows an ELT (Extract, Load, Transform). The data is loos
 
 ### 1. Ingestion/Extraction
 *   **Python/Polars:** Reads raw CSV survey data. Fixes row data and combines day records. Prepares formatting for BQ
-*   **ML Categorization:** Leverages `transformers` (BART Large MNLI) to categorize open-ended responses into player personas: *Competitive, For Fun (Oshi), Casual,* and *Burnt Out*.
+*   **ML Categorization:** Leverages `transformers` (ModernBART) to :
+    * Categorize open-ended responses into player personas: *Competitive, For Fun (Oshi), Casual,* and *Burnt Out*.
+    * Categorize device type used by player (Desktop vs Mobile)
 *   **BigQuery Load:** Loads the enriched Bronze data into BigQuery as the source for dbt.
 
 ### 2. Transformation
@@ -81,7 +83,7 @@ This project loosely follows an ELT (Extract, Load, Transform). The data is loos
     * `dim_uma_style` (Role ID, Role Name)
     * `map_cards` (Card ID, Column Name)
     * ### **ERD:**
-    ![img.png](img.png)
+    ![img.png](ER Diagram - Gold.png)
 
 ## Tech Stack
 *   **Orchestration/ETL:** Python 3.12, dbt
