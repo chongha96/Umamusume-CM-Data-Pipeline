@@ -1,0 +1,7 @@
+track_id,track_name,track_distance_type,track_distance_meters,track_location,track_surface
+6,Libra Cup,Long,3000,Kyoto,Turf
+7,Scorpio Cup,Medium,2000,Tokyo,Turf
+8,Sagittarius Cup,Long,2500,Nakayama,Turf
+9,Capricorn Cup,Sprint,1200,Chukyo,Turf
+10,Aquarius Cup,Mile,1600,Tokyo,Dirt
+11,Pisces Cup,Long,3200,Hanshin,Turf

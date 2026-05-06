@@ -1,0 +1,41 @@
+name: 'dbt_uma'
+version: '1.0.0'
+config-version: 2
+
+profile: 'uma_profile'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_uma:
+    1_bronze:
+      +enabled: true
+      +materialized: table
+      +schema: "{{ env_var('GCP_BRONZE_DATASET_ID','') }}"
+    2_silver:
+      +enabled: true
+      +materialized: table
+      +schema: "{{ env_var('GCP_SILVER_DATASET_ID','') }}"
+    3_gold:
+      +enabled: true
+      +materialized: table
+      +schema: "{{ env_var('GCP_GOLD_DATASET_ID','') }}"
+seeds:
+  dbt_uma:
+    +schema: "{{ env_var('GCP_GOLD_DATASET_ID','') }}"
+    +column_types:
+      device_id: int64
+      card_id: int64
+      style_id: int64
+      spend_id: int64
+      role_id: int64
+

@@ -1,0 +1,32 @@
+version: 2
+sources:
+  - name: 1_bronze_data
+    project: uma-cm-etl
+    dataset: 1_bronze_data
+    tables:
+      - name: raw_cm6_day_1
+      - name: raw_cm7_day_1
+      - name: raw_cm7_day_2
+      - name: raw_cm7_day_3
+      - name: raw_cm7_day_4
+      - name: raw_cm7_day_5
+      - name: raw_cm8_day_1
+      - name: raw_cm8_day_2
+      - name: raw_cm8_day_3
+      - name: raw_cm8_day_4
+      - name: raw_cm8_day_5
+      - name: raw_cm9_day_1
+      - name: raw_cm9_day_2
+      - name: raw_cm9_day_3
+      - name: raw_cm9_day_4
+      - name: raw_cm9_day_5
+      - name: raw_cm10_day_1
+      - name: raw_cm10_day_2
+      - name: raw_cm10_day_3
+      - name: raw_cm10_day_4
+      - name: raw_cm10_day_5
+      - name: raw_cm11_day_1
+      - name: raw_cm11_day_2
+      - name: raw_cm11_day_3
+      - name: raw_cm11_day_4
+      - name: raw_cm11_day_5
